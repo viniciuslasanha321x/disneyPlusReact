@@ -1,0 +1,211 @@
+{
+  "slides": [
+    {
+      "img": "https://live.staticflickr.com/65535/50917191056_df03ecf67a_h.jpg"
+    },
+    {
+      "img": "https://live.staticflickr.com/65535/50917191026_15af423314_h.jpg"
+    },
+    {
+      "img": "https://live.staticflickr.com/65535/50917191001_403a6e18e5_h.jpg"
+    },
+    {
+      "img": "https://live.staticflickr.com/65535/50917334022_982127cfac_h.jpg"
+    },
+    {
+      "img": "https://live.staticflickr.com/65535/50856700607_ff3dac74ae_h.jpg"
+    },
+    {
+      "img": "https://live.staticflickr.com/65535/50855885373_e509040aa6_h.jpg"
+    },
+    {
+      "img": "https://live.staticflickr.com/65535/50856700537_c715562d11_h.jpg"
+    },
+    {
+      "img": "https://live.staticflickr.com/65535/50917212916_1dae9a514f_h.jpg"
+    },
+    {
+      "img": "https://live.staticflickr.com/65535/50856700762_9f8688b849_h.jpg"
+    }
+  ],
+  "categoriesfilms": [
+    "Destaques",
+    "Outros Filmes A/Z",
+    "Filmes",
+    "Animação",
+    "Comédia",
+    "Documentário",
+    "Drama",
+    "Crianças",
+    "Ultra HD E HDR"
+  ],
+  "categorieseries": [
+    "Destaques",
+    "Todas As Séries",
+    "Ação/Ventura",
+    "Animação",
+    "Comédia",
+    "Docusséries",
+    "Infantis"
+  ],
+  "recommendedcategoryimages": [
+    {
+      "link":"wandavision-page-film",
+      "img":"https://live.staticflickr.com/65535/51062979341_5b1f24b50b_m.jpg"
+    },
+    {
+      "link":"wandavision-page-film",
+      "img":"https://live.staticflickr.com/65535/51063065127_71cbdf6fd9_m.jpg"
+    },
+    {
+      "link":"series",
+      "img":"https://live.staticflickr.com/65535/51062269898_553e6aa60f_m.jpg"
+    },
+    {
+      "link":"series",
+      "img":"https://live.staticflickr.com/65535/51062270633_019b961bc7_m.jpg"
+    },
+    {
+      "link":"series",
+      "img":"https://live.staticflickr.com/65535/51063068927_8b691e3b8c_m.jpg"
+    },
+    {
+      "link":"series",
+      "img":"https://live.staticflickr.com/65535/51063070942_3d5203a290_m.jpg"
+    },
+    {
+      "link":"series",
+      "img":"https://live.staticflickr.com/65535/51062342823_a22d2f775f_m.jpg"
+    },
+    {
+      "link":"series",
+      "img":"https://live.staticflickr.com/65535/51063141762_13c2a5bddf_m.jpg"
+    },
+    {
+      "link":"series",
+      "img":"https://live.staticflickr.com/65535/51062343293_5a011a898e_m.jpg"
+    },
+    {
+      "link":"series",
+      "img":"https://live.staticflickr.com/65535/51063071772_ff39cdc534_m.jpg"
+    },
+    {
+      "link":"wandavision-page-film",
+      "img":"https://live.staticflickr.com/65535/51063072732_5e21ffb61b_m.jpg"
+    },
+    {
+      "link":"wandavision-page-film",
+      "img":"https://live.staticflickr.com/65535/51062276138_f4224ef39d_m.jpg"
+    },
+    {
+      "link":"series",
+      "img":"https://live.staticflickr.com/65535/51062989336_34ae2f0fba_m.jpg"
+    },
+    {
+      "link":"series",
+      "img":"https://live.staticflickr.com/65535/51063077287_119f4bf6b7_m.jpg"
+    },
+    {
+      "link":"series",
+      "img":"https://live.staticflickr.com/65535/51063078437_6c616d4c9d_m.jpg"
+    },
+    {
+      "link":"series",
+      "img":"https://live.staticflickr.com/65535/51063080107_cea04d6878_m.jpg"
+    },
+    {
+      "link":"series",
+      "img":"https://live.staticflickr.com/65535/51063081082_566b342be5_m.jpg"
+    },
+    {
+      "link":"series",
+      "img":"https://live.staticflickr.com/65535/51062285028_6d608400ba_m.jpg"
+    },
+    {
+      "link":"series",
+      "img":"https://live.staticflickr.com/65535/51062286903_4c886e8936_m.jpg"
+    },
+    {
+      "link":"series",
+      "img":"https://live.staticflickr.com/65535/51063000146_f54d2ed556_m.jpg"
+    },
+    {
+      "link":"series",
+      "img":"https://live.staticflickr.com/65535/51063000921_b8e93c9fd2_m.jpg"
+    },
+    {
+      "link":"series",
+      "img":"https://live.staticflickr.com/65535/51062289523_a8b97d9502_m.jpg"
+    },
+    {
+      "link":"series",
+      "img":"https://live.staticflickr.com/65535/51063002801_038d7baf1d_m.jpg"
+    }
+  ],
+  "wandavisionimagespartwo": [
+    {
+      "link":"series",
+      "img":"https://live.staticflickr.com/65535/51030440171_412b318781_m.jpg"
+    },
+    {
+      "link":"series",
+      "img":"https://live.staticflickr.com/65535/51030440146_dbac89c2c7_m.jpg"
+    },
+    {
+      "link":"series",
+      "img":"https://live.staticflickr.com/65535/51030454051_f457f4911d_m.jpg"
+    },
+    {
+      "link":"series",
+      "img":"https://live.staticflickr.com/65535/51029712268_100a2ebef4_m.jpg"
+    },
+    {
+      "link":"series",
+      "img":"https://live.staticflickr.com/65535/51036401042_3e964ca4ab_m.jpg"
+    },
+    {
+      "link":"series",
+      "img":"https://live.staticflickr.com/65535/51030440171_412b318781_m.jpg"
+    },
+    {
+      "link":"series",
+      "img":"https://live.staticflickr.com/65535/51030440146_dbac89c2c7_m.jpg"
+    },
+    {
+      "link":"series",
+      "img":"https://live.staticflickr.com/65535/51030454051_f457f4911d_m.jpg"
+    },
+    {
+      "link":"series",
+      "img":"https://live.staticflickr.com/65535/51029712268_100a2ebef4_m.jpg"
+    },
+    {
+      "link":"series",
+      "img":"https://live.staticflickr.com/65535/51036401042_3e964ca4ab_m.jpg"
+    }
+  ],
+  "routesuggestionpartone": [
+    "https://live.staticflickr.com/65535/51030440171_412b318781_m.jpg",
+    "https://live.staticflickr.com/65535/51030440146_dbac89c2c7_m.jpg",
+    "https://live.staticflickr.com/65535/51030454051_f457f4911d_m.jpg",
+    "https://live.staticflickr.com/65535/51029712268_100a2ebef4_m.jpg",
+    "https://live.staticflickr.com/65535/51036401042_3e964ca4ab_m.jpg",
+    "https://live.staticflickr.com/65535/51030440171_412b318781_m.jpg",
+    "https://live.staticflickr.com/65535/51030440146_dbac89c2c7_m.jpg",
+    "https://live.staticflickr.com/65535/51030454051_f457f4911d_m.jpg",
+    "https://live.staticflickr.com/65535/51029712268_100a2ebef4_m.jpg",
+    "https://live.staticflickr.com/65535/51036401042_3e964ca4ab_m.jpg"
+  ],
+  "routesuggestionparttwo": [
+    "https://live.staticflickr.com/65535/51030440211_4a1a3f25fe_m.jpg",
+    "https://live.staticflickr.com/65535/51030440271_7586c6214e_m.jpg",
+    "https://live.staticflickr.com/65535/51030541972_dc8d52685b_m.jpg",
+    "https://live.staticflickr.com/65535/51030541912_5b7e1fcdc5_m.jpg",
+    "https://live.staticflickr.com/65535/51030440256_a94407256a_m.jpg",
+    "https://live.staticflickr.com/65535/51030440171_412b318781_m.jpg",
+    "https://live.staticflickr.com/65535/51030440146_dbac89c2c7_m.jpg",
+    "https://live.staticflickr.com/65535/51030454051_f457f4911d_m.jpg",
+    "https://live.staticflickr.com/65535/51029712268_100a2ebef4_m.jpg",
+    "https://live.staticflickr.com/65535/51036401042_3e964ca4ab_m.jpg"
+  ]
+}

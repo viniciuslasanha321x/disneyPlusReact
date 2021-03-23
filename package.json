@@ -1,0 +1,120 @@
+{
+  "name": "electron-react-typescript",
+  "version": "1.0.0",
+  "description": "An Electron boilerplate including TypeScript, React, Jest and ESLint.",
+  "main": "./dist/main.js",
+  "scripts": {
+    "dev": "npm-run-all -p dev:react electron:serve",
+    "dev:electron": "cross-env NODE_ENV=development webpack --config webpack/electron.webpack.js --mode development && npm run start:electron",
+    "dev:react": "cross-env NODE_ENV=development webpack-dev-server --config webpack/react.webpack.js --mode development",
+    "electron:serve": "wait-on http-get://localhost:4000/ && npm run dev:electron",
+    "start:electron": "electron .",
+    "build": "npm-run-all build:electron build:react",
+    "build:run": "npm-run-all build start:electron",
+    "build:electron": "webpack --config webpack/electron.webpack.js",
+    "build:react": "webpack --config webpack/react.webpack.js",
+    "package": "npm-run-all build package:dist",
+    "package:dist": "electron-builder --dir",
+    "test": "jest",
+    "start": "json-server --watch db.json --port 3001"
+  },
+  "keywords": [],
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@babel/plugin-transform-runtime": "^7.12.10",
+    "@babel/preset-env": "^7.9.5",
+    "@babel/preset-react": "^7.9.4",
+    "@babel/preset-typescript": "^7.9.0",
+    "@commitlint/cli": "^9.0.1",
+    "@commitlint/config-conventional": "^9.0.1",
+    "@commitlint/core": "^9.0.1",
+    "@pmmmwh/react-refresh-webpack-plugin": "^0.4.3",
+    "@testing-library/jest-dom": "^5.11.0",
+    "@testing-library/react": "^10.4.3",
+    "@types/axios": "^0.14.0",
+    "@types/electron-devtools-installer": "^2.2.0",
+    "@types/jest": "^26.0.3",
+    "@types/react": "^16.9.34",
+    "@types/react-dom": "^16.9.6",
+    "@types/react-lottie": "^1.2.5",
+    "@types/react-router-dom": "^5.1.6",
+    "@types/styled-components": "^5.1.0",
+    "@typescript-eslint/eslint-plugin": "^4.11.1",
+    "@typescript-eslint/parser": "^4.11.1",
+    "babel-loader": "^8.1.0",
+    "commitizen": "^4.1.2",
+    "cross-env": "^7.0.2",
+    "cz-conventional-changelog": "3.2.0",
+    "electron-builder": "^22.7.0",
+    "eslint": "^7.16.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-prettier": "^7.1.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-import-resolver-typescript": "^2.3.0",
+    "eslint-plugin-import": "2.22.1",
+    "eslint-plugin-jsx-a11y": "6.4.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^3.3.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-react": "7.21.5",
+    "eslint-plugin-react-hooks": "4",
+    "eslint-plugin-standard": "^4.0.1",
+    "html-webpack-plugin": "^4.2.0",
+    "jest": "^26.1.0",
+    "json-server": "^0.16.3",
+    "lint-staged": "^10.2.11",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.2.1",
+    "react-refresh": "^0.9.0",
+    "ts-jest": "^26.1.1",
+    "typescript": "^3.9.5",
+    "wait-on": "^5.0.1",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3"
+  },
+  "dependencies": {
+    "@types/react-slick": "^0.23.4",
+    "axios": "^0.21.1",
+    "css-loader": "^5.1.3",
+    "electron": "^8.2.2",
+    "electron-devtools-installer": "^3.1.0",
+    "formik": "^2.2.6",
+    "polished": "^4.0.5",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-elastic-carousel": "^0.11.2",
+    "react-icons": "^4.1.0",
+    "react-lottie": "^1.2.3",
+    "react-router-dom": "^5.2.0",
+    "sancarousel": "^1.3.1",
+    "styled-components": "^5.1.1",
+    "ts-loader": "^8.0.18",
+    "url-loader": "^4.1.1",
+    "yup": "^0.32.8"
+  },
+  "build": {
+    "appId": "your.id",
+    "mac": {
+      "category": "public.app-category.video"
+    },
+    "directories": {
+      "output": "packages"
+    },
+    "files": [
+      "package.json",
+      "dist/**"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix"
+    ]
+  }
+}
