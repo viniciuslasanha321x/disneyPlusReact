@@ -6,7 +6,7 @@ export const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 300px;
+  height: 200px;
   width: 100%;
 
   .rec-carousel-item:focus {
@@ -19,6 +19,8 @@ export const Container = styled.div`
 
   .rec {
     height: 200px;
+    background-color: transparent !important;
+    box-shadow: none !important;
   }
 `;
 

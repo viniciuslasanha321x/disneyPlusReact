@@ -8,7 +8,7 @@ export const Container = styled.div`
   width: 100%;
   height: 70%;
   background: transparent;
-  margin-top: 160px;
+  margin-top: 100px;
   word-break: break-all;
 `;
 
@@ -61,6 +61,11 @@ export const TabButton = styled.button<TabButtonProps>`
   &:hover{
     color: #fff;
   }
+
+  @media (max-width: 600px) {
+   font-size:15px;
+  };
+
 `;
 
 export const ContentTabs = styled.div`

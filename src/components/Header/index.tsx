@@ -117,7 +117,9 @@ const Header = () => {
             </li>
 
             <li>
-              <Link to="/">Configurações do Aplicativo</Link>
+              <Link to="/application-settings">
+                Configurações do Aplicativo
+              </Link>
             </li>
 
             <li>

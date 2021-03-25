@@ -118,6 +118,10 @@ export const NavDropdown = styled.div<NavDropdown>`
       border: 1px solid rgb(151, 151, 151, 0.34);
       border-radius: 8px;
 
+      @media (max-width: 600px) {
+        right: 2px;
+      }
+
       a + a {
         margin: 15px 0 0 0;
       }
@@ -164,12 +168,12 @@ export const Avatar = styled.div<AvatarProps>`
     width: 48px;
     height: 48px;
     margin-left: 16px;
+    z-index: 999;
   }
 
-  @media (max-width: 1180px) {
-    span {
-      display: ${({ nameIsVisible }) => (nameIsVisible ? 'block' : 'none')};
-    }
+  span {
+    display: ${({ nameIsVisible }) => (nameIsVisible ? 'block' : 'none')};
+    z-index: 999;
   }
 `;
 
@@ -196,7 +200,7 @@ export const DropdownProfile = styled.div<DropdownProfileProps>`
   border: 1px solid rgb(151, 151, 151, 0.34);
   border-radius: 8px;
   padding: 15px 20px;
-  z-index: -1;
+  z-index: 1;
   overflow: hidden;
 
   animation: ${animationDropdownProfile} 500ms;

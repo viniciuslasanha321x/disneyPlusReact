@@ -1,7 +1,13 @@
 // Modules
-import React, { useState, PropsWithChildren } from 'react';
+import React, { useState, useEffect, PropsWithChildren } from 'react';
 
-import { ContainerFilmsByBrands, ContentFilmsByBrand } from './styles';
+import { IconLoading } from '../../assets/icons';
+
+import {
+  ContainerFilmsByBrands,
+  ContentFilmsByBrand,
+  ContainerBackground,
+} from './styles';
 
 interface FilmProps {
   videoUrl: string;
@@ -9,7 +15,6 @@ interface FilmProps {
   altImg?: string;
   backgroundImg: string;
   altBackgroundImg: string;
-  color?: string;
 }
 
 const FilmsByBrand = ({
@@ -18,10 +23,14 @@ const FilmsByBrand = ({
   altImg,
   backgroundImg,
   altBackgroundImg,
-  color = '#000',
 }: PropsWithChildren<FilmProps>) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isVisibleBackground, setIsVisibleBackground] = useState(true);
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => setIsLoading(false), 100);
+  }, []);
 
   const handleChangeBackground = () => {
     if (window.scrollY >= 2) {
@@ -33,27 +42,44 @@ const FilmsByBrand = ({
   window.addEventListener('scroll', handleChangeBackground);
 
   return (
-    <ContainerFilmsByBrands color={color} isScrolled={isScrolled}>
-      <ContentFilmsByBrand color={color} isScrolled={isScrolled}>
-        {isVisibleBackground ? (
-          <>
-            <img className="brandLogo_img" src={logoImg} alt={altImg} />
-            <video onEnded={() => setIsVisibleBackground(false)} autoPlay muted>
-              <source src={videoUrl} type="video/mp4" />
-            </video>
-          </>
-        ) : (
-          <>
-            <img className="brandLogo_img" src={logoImg} alt={altImg} />
+    <>
+      {isLoading ? (
+        <ContainerFilmsByBrands>
+          <div className="teste">
             <img
-              className="background_img"
-              src={backgroundImg}
-              alt={altBackgroundImg}
+              className="Content__loading"
+              src={IconLoading}
+              alt="Icon Loading"
             />
-          </>
-        )}
-      </ContentFilmsByBrand>
-    </ContainerFilmsByBrands>
+          </div>
+        </ContainerFilmsByBrands>
+      ) : (
+        <ContainerFilmsByBrands>
+          <ContentFilmsByBrand isScrolled={isScrolled}>
+            <img className="brandLogo_img" src={logoImg} alt={altImg} />
+            {isVisibleBackground ? (
+              <ContainerBackground>
+                <video
+                  onEnded={() => setIsVisibleBackground(false)}
+                  autoPlay
+                  muted
+                >
+                  <source src={videoUrl} type="video/mp4" />
+                </video>
+              </ContainerBackground>
+            ) : (
+              <>
+                <img
+                  className="background_img"
+                  src={backgroundImg}
+                  alt={altBackgroundImg}
+                />
+              </>
+            )}
+          </ContentFilmsByBrand>
+        </ContainerFilmsByBrands>
+      )}
+    </>
   );
 };
 

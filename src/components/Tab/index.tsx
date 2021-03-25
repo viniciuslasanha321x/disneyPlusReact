@@ -30,6 +30,15 @@ interface PropsTabMovie {
   fifthPersonCast: string;
   slideMoviePartOne: Array<{
     img: string;
+    link: string;
+  }>;
+  slideMoviePartTwo: Array<{
+    img: string;
+    link: string;
+  }>;
+  slideMoviePartThree: Array<{
+    img: string;
+    link: string;
   }>;
   disableEpisodies?: boolean;
 }
@@ -47,9 +56,11 @@ const Tab = ({
   fourthPersonCast,
   fifthPersonCast,
   slideMoviePartOne,
+  slideMoviePartTwo,
+  slideMoviePartThree,
   disableEpisodies = false,
 }: PropsTabMovie) => {
-  const [toggleState, setToggleState] = useState(1);
+  const [toggleState, setToggleState] = useState(disableEpisodies ? 2 : 1);
 
   const toggleTab = (index: number) => {
     setToggleState(index);
@@ -112,7 +123,7 @@ const Tab = ({
             }
           >
             <h2>Sugestões Para Você</h2>
-            <TypesCarousel carouselImagesFilm={slideMoviePartOne} />
+            <TypesCarousel carouselImagesFilm={slideMoviePartTwo} />
           </div>
           <div
             className={
@@ -120,7 +131,7 @@ const Tab = ({
             }
           >
             <h2>Content 3</h2>
-            <TypesCarousel carouselImagesFilm={slideMoviePartOne} />
+            <TypesCarousel carouselImagesFilm={slideMoviePartThree} />
           </div>
           <div
             className={

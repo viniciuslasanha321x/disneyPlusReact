@@ -11,11 +11,13 @@ export type Slide = { link: string; img: string };
 
 const WandavisionPageFilm: React.FC = () => {
   const [imageMoviePartOne, setImageMoviePartOne] = useState<Slide[]>([]);
+  const [imageMoviePartTwo, setImageMoviePartTwo] = useState<Slide[]>([]);
+  const [imageMoviePartThree, setImageMoviePartThree] = useState<Slide[]>([]);
   // const [imageMoviePartTwo, setImageMoviePartTwo] = useState<Slide[]>([]);
-  const [
-    imageSuggestionMoviePartOne,
-    setImageSuggestionMoviePartOne,
-  ] = useState<Slide[]>([]);
+  // const [
+  //   imageSuggestionMoviePartOne,
+  //   setImageSuggestionMoviePartOne,
+  // ] = useState<Slide[]>([]);
   // const [
   //   imageSuggestionMoviePartTwo,
   //   setImageSuggestionMoviePartTwo,
@@ -24,9 +26,15 @@ const WandavisionPageFilm: React.FC = () => {
   useEffect(() => {
     (async function loadSlides() {
       const { data: data1 } = await api.get<Slide[]>(
-        'recommendedcategoryimages',
+        'protagonistwomenimagesdashboard',
       );
-      const { data: data2 } = await api.get<Slide[]>('wandavisionimagespartwo');
+      const { data: data2 } = await api.get<Slide[]>(
+        'imagesmusicanddancedashboard',
+      );
+
+      const { data: data3 } = await api.get<Slide[]>(
+        'actionandadventureimagesdashboard',
+      );
       // const { data: data3 } = await api.get<Slide[]>('routesuggestionpartone');
       // const { data: data4 } = await api.get<Slide[]>('routesuggestionparttwo');
 
@@ -34,7 +42,9 @@ const WandavisionPageFilm: React.FC = () => {
       // console.log(formattedArray);
       setImageMoviePartOne(data1);
       // setImageMoviePartTwo(data2);
-      setImageSuggestionMoviePartOne(data2);
+      setImageMoviePartTwo(data2);
+
+      setImageMoviePartThree(data3);
       // setImageSuggestionMoviePartTwo(data4);
     })();
   }, []);
@@ -53,8 +63,10 @@ const WandavisionPageFilm: React.FC = () => {
         of a text that will be inserted here, it’s just for testing and
         example only, ignore this text, it’s just for testing purposes"
         imageMoviePartOne={imageMoviePartOne}
+        imageMoviePartTwo={imageMoviePartTwo}
+        imageMoviePartThree={imageMoviePartThree}
+        disableEpisodiesTab
         // imageMoviePartTwo={imageSuggestionMoviePartOne}
-        imageSuggestionMoviePartOne={imageSuggestionMoviePartOne}
         // imageSuggestionMoviePartTwo={imageSuggestionMoviePartTwo}
         releaseDateInformation="receber da api"
         genreInformation="receber da api"

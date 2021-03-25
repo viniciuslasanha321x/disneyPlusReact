@@ -33,16 +33,18 @@ type PropsMovieAndSerie = {
   fifthPersonCast: string;
   imageMoviePartOne: Array<{
     img: string;
+    link: string;
   }>;
   imageMoviePartTwo: Array<{
     img: string;
+    link: string;
   }>;
-  imageSuggestionMoviePartOne: Array<{
+  imageMoviePartThree: Array<{
     img: string;
+    link: string;
   }>;
-  imageSuggestionMoviePartTwo: Array<{
-    img: string;
-  }>;
+  disableEpisodiesTab?: boolean;
+  disableEpisodies?: boolean;
 };
 
 const MovieAndSeriePage = ({
@@ -63,8 +65,9 @@ const MovieAndSeriePage = ({
   fifthPersonCast,
   imageMoviePartOne,
   imageMoviePartTwo,
-  imageSuggestionMoviePartOne,
-  imageSuggestionMoviePartTwo,
+  imageMoviePartThree,
+  disableEpisodiesTab,
+  disableEpisodies = false,
 }: PropsMovieAndSerie) => {
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -126,6 +129,8 @@ const MovieAndSeriePage = ({
             <div className="tabInformationMovie">
               <Tab
                 slideMoviePartOne={imageMoviePartOne}
+                slideMoviePartTwo={imageMoviePartTwo}
+                slideMoviePartThree={imageMoviePartThree}
                 titleFilm={titlefilm}
                 filmSummary={filmSummary}
                 releaseDateInformation={releaseDateInformation}
@@ -136,6 +141,7 @@ const MovieAndSeriePage = ({
                 thirdPersonCast={thirdPersonCast}
                 fourthPersonCast={fourthPersonCast}
                 fifthPersonCast={fifthPersonCast}
+                disableEpisodies={disableEpisodiesTab}
               />
             </div>
           </div>

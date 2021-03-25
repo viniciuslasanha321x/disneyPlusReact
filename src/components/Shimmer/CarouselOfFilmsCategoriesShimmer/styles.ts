@@ -19,6 +19,8 @@ export const Container = styled.div`
 
   .rec {
     height: 200px;
+    background-color: transparent !important;
+    box-shadow: none !important;
   }
 `;
 

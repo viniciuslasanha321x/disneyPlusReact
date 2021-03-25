@@ -1,28 +1,48 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
 interface BackgroundProps {
   isScrolled: boolean;
-  color: string;
 }
 
-export const ContainerFilmsByBrands = styled.div<BackgroundProps>`
+interface ContainerProps {
+  isLoading?: boolean;
+}
+
+const animationLoading = keyframes`
+  from{
+    transform:rotateZ(0);
+  }to{
+    transform:rotateZ(360deg);
+  }
+`;
+
+export const ContainerFilmsByBrands = styled.div<ContainerProps>`
   position: relative;
   top: 0;
-  background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  background: ${({ color }) => color};
+
+  .teste {
+    position: absolute;
+    top: 340px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: ${animationLoading} 1s linear infinite;
+
+    .Container__loading {
+      width: 30px;
+      height: 30px;
+    }
+  }
 `;
 
 export const ContentFilmsByBrand = styled.div<BackgroundProps>`
-  position: absolute;
-  top: 0;
-  left: 0;
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
 
   .background_img {
     width: 100%;
@@ -34,7 +54,7 @@ export const ContentFilmsByBrand = styled.div<BackgroundProps>`
 
   .brandLogo_img {
     position: absolute;
-    max-width: 45%;
+    width: 45%;
     z-index: 999;
   }
 
@@ -44,4 +64,12 @@ export const ContentFilmsByBrand = styled.div<BackgroundProps>`
       props.isScrolled ? 'brightness(65%)' : 'brightness(100%)'};
     transition: filter 400ms;
   }
+`;
+
+export const ContainerBackground = styled.div`
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 `;

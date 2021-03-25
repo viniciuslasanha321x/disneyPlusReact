@@ -2,13 +2,16 @@ import React from 'react';
 import { render } from 'react-dom';
 import GlobalStyle from './styles/global';
 import Routes from './routes';
-import CarouselRoutesContext from './components/CarouselRoutesContext';
+import CarouselRoutesContextDashboard from './components/CarouselRoutesContextDashboard';
+import CarouselRoutesContextCardDashboard from './components/CarouselRoutesContextCardsDashboard';
 
 const App: React.FC = () => (
-  <CarouselRoutesContext>
-    <Routes />
-    <GlobalStyle />
-  </CarouselRoutesContext>
+  <CarouselRoutesContextDashboard>
+    <CarouselRoutesContextCardDashboard>
+      <Routes />
+      <GlobalStyle />
+    </CarouselRoutesContextCardDashboard>
+  </CarouselRoutesContextDashboard>
 );
 
 const mainElement = document.createElement('div');

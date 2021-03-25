@@ -1,5 +1,5 @@
 // Modules
-import React from 'react';
+import React, { useContext } from 'react';
 
 // Assets
 import DisneyImageLogo from '../../assets/images/LogoDisneyForBackground.png';
@@ -8,8 +8,15 @@ import BackgroundDisneyCastle from '../../assets/images/BackgroundDisneyCastle.p
 
 import Header from '../../components/Header';
 import FilmsByBrand from '../../components/FilmsByBrand';
+import TypesCarousel from '../../components/TypesCarousel';
+import { CarouselContextCardDashboard } from '../../components/CarouselRoutesContextCardsDashboard';
+
+import { ContainerCarouselFilms } from './styles';
 
 const BrandDisneyFilmPage = () => {
+  const { recommendedTendenciesImagesDashboard } = useContext(
+    CarouselContextCardDashboard,
+  );
   return (
     <>
       <Header />
@@ -20,6 +27,32 @@ const BrandDisneyFilmPage = () => {
         backgroundImg={BackgroundDisneyCastle}
         altBackgroundImg="Background Disney Castle"
       />
+      <ContainerCarouselFilms>
+        <h4>Recomendados</h4>
+        <TypesCarousel
+          carouselImagesFilm={recommendedTendenciesImagesDashboard}
+        />
+        <h4>Recomendados</h4>
+        <TypesCarousel
+          carouselImagesFilm={recommendedTendenciesImagesDashboard}
+        />
+        <h4>Recomendados</h4>
+        <TypesCarousel
+          carouselImagesFilm={recommendedTendenciesImagesDashboard}
+        />
+        <h4>Recomendados</h4>
+        <TypesCarousel
+          carouselImagesFilm={recommendedTendenciesImagesDashboard}
+        />
+        <h4>Recomendados</h4>
+        <TypesCarousel
+          carouselImagesFilm={recommendedTendenciesImagesDashboard}
+        />
+        <h4>Recomendados</h4>
+        <TypesCarousel
+          carouselImagesFilm={recommendedTendenciesImagesDashboard}
+        />
+      </ContainerCarouselFilms>
     </>
   );
 };

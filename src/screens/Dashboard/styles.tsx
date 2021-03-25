@@ -17,7 +17,8 @@ export const FilmCardContent = styled.div`
 export const ContainerCarouselFilms = styled.div`
   h4 {
     position: relative;
-    top: 45px;
+    font-weight: 600;
+    top: 20px;
     font-size: 20px;
     margin-left: 80px;
   }

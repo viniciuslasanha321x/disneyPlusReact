@@ -8,13 +8,13 @@ import Header from '../../components/Header';
 import Carousel from '../../components/Carousel';
 import FilmCard from '../../components/FilmCard';
 import TypesCarousel from '../../components/TypesCarousel';
-import { CarouselContext } from '../../components/CarouselRoutesContext';
+import { CarouselContextDashboard } from '../../components/CarouselRoutesContextDashboard';
 // import CarouselDashboard from '../../components/CarouselDashboard';
 import FilmCardShimmerEffect from '../../components/Shimmer/FilmCardShimmer';
 import MainCarouselOfFilmsShimmer from '../../components/Shimmer/MainCarouselOfFilmsShimmer';
 
 // Services
-import { api, apiTMDB } from '../../services/api';
+import { api } from '../../services/api';
 
 // Assets
 import DisneyCardImage from '../../assets/images/DisneyImage.png';
@@ -30,7 +30,6 @@ import NationalGeographicVideoCard from '../../assets/videos/NationalGeoGraphicV
 
 // Stylized components
 import {
-  Content,
   MainCarouselOfFilmsDashboard,
   FilmCardContent,
   ContainerCarouselFilms,
@@ -41,9 +40,17 @@ export type Slide = { link: string; img: string };
 
 const Dashboard = () => {
   const {
-    imageSuggestionMoviePartOne,
-    imageSuggestionMoviePartTwo,
-  } = useContext(CarouselContext);
+    recommendedTendenciesImagesDashboard,
+    imagesNewsAtDisneyPlusDashboard,
+    originalDashboardImages,
+    oscarWinnerImagesDashboard,
+    sportsImagesDashboard,
+    pictureInspiredByBooksDashboard,
+    actionAndAdventureImagesDashboard,
+    imagesMusicAndDanceDashboard,
+    protagonistWomenImagesDashboard,
+  } = useContext(CarouselContextDashboard);
+
   const [slides, setSlides] = useState<Slide[]>([]);
   const [isLoading, setIsLoading] = useState(true);
 
@@ -79,6 +86,10 @@ const Dashboard = () => {
 
       setSlides(data);
     })();
+  }, []);
+
+  useEffect(() => {
+    setTimeout(() => setIsLoading(false), 2000);
   }, []);
 
   // useEffect(() => {
@@ -146,18 +157,37 @@ const Dashboard = () => {
 
       <ContainerCarouselFilms>
         <h4>Recomendados</h4>
-        <TypesCarousel carouselImagesFilm={imageSuggestionMoviePartOne} />
-        <TypesCarousel carouselImagesFilm={imageSuggestionMoviePartOne} />
-        <TypesCarousel carouselImagesFilm={imageSuggestionMoviePartTwo} />
-        <TypesCarousel carouselImagesFilm={imageSuggestionMoviePartTwo} />
-        <TypesCarousel carouselImagesFilm={imageSuggestionMoviePartOne} />
-        <TypesCarousel carouselImagesFilm={imageSuggestionMoviePartOne} />
-        <TypesCarousel carouselImagesFilm={imageSuggestionMoviePartTwo} />
-        <TypesCarousel carouselImagesFilm={imageSuggestionMoviePartTwo} />
-        <TypesCarousel carouselImagesFilm={imageSuggestionMoviePartOne} />
-        <TypesCarousel carouselImagesFilm={imageSuggestionMoviePartOne} />
-        <TypesCarousel carouselImagesFilm={imageSuggestionMoviePartTwo} />
-        <TypesCarousel carouselImagesFilm={imageSuggestionMoviePartTwo} />
+        <TypesCarousel
+          carouselImagesFilm={recommendedTendenciesImagesDashboard}
+        />
+        <h4>Novidades No Disney+</h4>
+        <TypesCarousel carouselImagesFilm={imagesNewsAtDisneyPlusDashboard} />
+
+        <h4>Originais</h4>
+        <TypesCarousel carouselImagesFilm={originalDashboardImages} />
+
+        <h4>Vencedores do Oscar®</h4>
+        <TypesCarousel carouselImagesFilm={oscarWinnerImagesDashboard} />
+
+        <h4>Esportes</h4>
+        <TypesCarousel carouselImagesFilm={sportsImagesDashboard} />
+
+        <h4>Tendências</h4>
+        <TypesCarousel
+          carouselImagesFilm={recommendedTendenciesImagesDashboard}
+        />
+
+        <h4>Inspirados Em Livros</h4>
+        <TypesCarousel carouselImagesFilm={pictureInspiredByBooksDashboard} />
+
+        <h4>Ação e Aventura</h4>
+        <TypesCarousel carouselImagesFilm={actionAndAdventureImagesDashboard} />
+
+        <h4>Música e Dança</h4>
+        <TypesCarousel carouselImagesFilm={imagesMusicAndDanceDashboard} />
+
+        <h4>Mulheres Protagonistas</h4>
+        <TypesCarousel carouselImagesFilm={protagonistWomenImagesDashboard} />
       </ContainerCarouselFilms>
     </>
   );

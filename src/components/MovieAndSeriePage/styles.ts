@@ -43,6 +43,10 @@ export const FilmInformation = styled.div`
   .logoFilm_img {
     margin-top: 100px;
     width: 35%;
+
+    @media (max-width: 650px) {
+      margin-top: 80px;
+    }
   }
 
   .containerButton {
