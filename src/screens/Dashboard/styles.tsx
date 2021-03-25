@@ -12,6 +12,15 @@ export const FilmCardContent = styled.div`
   flex-direction: row;
   grid-template-columns: repeat(auto-fit, 250px);
   gap: 17px;
+
+  @media (min-width: 2560px) {
+    grid-template-columns: repeat(auto-fit, 450px);
+  }
+
+  @media (min-width: 3440px) {
+    grid-template-columns: repeat(auto-fit, 550px);
+    gap: 20px;
+  }
 `;
 
 export const ContainerCarouselFilms = styled.div`

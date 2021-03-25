@@ -13,6 +13,16 @@ export const Container = styled.div`
   height: 140px;
   transition: all 250ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
 
+  @media (min-width: 2560px) {
+    width: 400px;
+    height: 230px;
+  }
+
+  @media (min-width: 3440px) {
+    width: 500px;
+    height: 280px;
+  }
+
   img {
     width: 100%;
     position: absolute;
@@ -28,5 +38,9 @@ export const Container = styled.div`
   :hover {
     transform: scale(1.1);
     border: 2px solid #fff;
+
+    @media (min-width: 2560px) {
+      border: 4px solid #fff;
+    }
   }
 `;

@@ -8,8 +8,14 @@ export const Container = styled.div`
   width: 100%;
   height: 70%;
   background: transparent;
-  margin-top: 100px;
+  margin-top: 40px;
   word-break: break-all;
+
+  @media (min-width: 2560px) {
+    width: 85%;
+    height: 70%;
+    margin-left: 100px;
+  }
 `;
 
 export const BlocTabs = styled.div`
@@ -86,7 +92,6 @@ export const ContentTabs = styled.div`
       h2 {
         font-weight: 600;
         text-align: start;
-        padding: 30px 0 30px 10px;
       }
     }
   }

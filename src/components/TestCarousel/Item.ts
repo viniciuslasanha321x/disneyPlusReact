@@ -18,11 +18,18 @@ export default styled.div`
     }
 
     img {
-      max-width: 100%;
-      max-height: 100%;
+      width:200px;
       border-radius:4px;
       box-shadow: rgb(0 0 0 / 69%) 0px 26px 30px -10px,
         rgb(0 0 0 / 73%) 0px 16px 10px -10px;
+
+        @media (min-width: 1700px) {
+         width:350px;
+    }
+
+        @media (min-width: 2560px) {
+         width:500px;
+    }
 
       &:hover {
         border: 4px solid #fff;
