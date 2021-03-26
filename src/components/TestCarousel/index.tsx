@@ -41,14 +41,18 @@ const TesteCarousel: React.FC<CarouselImages> = ({
 
   const breakPoints = [
     { width: 375, itemsToShow: 1, itemsToScroll: 1 },
-    { width: 550, itemsToShow: 2, itemsToScroll: 2 },
-    { width: 600, itemsToShow: 3, itemsToScroll: 3 },
-    { width: 768, itemsToShow: 4 },
+    { width: 536, itemsToShow: 2, itemsToScroll: 2 },
+    { width: 768, itemsToShow: 3, itemsToScroll: 2 },
+    { width: 867, itemsToShow: 4 },
     { width: 1200, itemsToShow: 5 },
-    { width: 1500, itemsToShow: 4 },
+    { width: 1500, itemsToShow: 5 },
     { width: 1700, itemsToShow: 4 },
+    { width: 1820, itemsToShow: 5 },
+    { width: 1950, itemsToShow: 5 },
+    // { width: 2100, itemsToShow: 6 },
     { width: 2500, itemsToShow: 4 },
     { width: 3100, itemsToShow: 4 },
+    { width: 3800, itemsToShow: 5 },
   ];
 
   return (

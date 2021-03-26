@@ -17,12 +17,20 @@ export const Container = styled.div`
     height: 600px;
   }
 
+  @media (min-width: 3100px) {
+    height: 700px;
+  }
+
   .rec-carousel-item:focus {
     outline: none;
   }
 
   .rec-pagination {
     display: none;
+  }
+
+  .rec-slider-container {
+    height: 200px;
   }
 
   .rec {
@@ -40,6 +48,20 @@ export const Container = styled.div`
       color: #fff;
       font-size: 60px;
       height: 600px;
+    }
+
+    @media (min-width: 3100px) {
+      height: 700px;
+    }
+  }
+
+  @media (min-width: 2560px) {
+    .rec-arrow-right {
+      margin-right: 100px;
+    }
+
+    .rec-arrow-left {
+      margin-left: 100px;
     }
   }
 `;

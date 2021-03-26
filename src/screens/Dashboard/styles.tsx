@@ -27,8 +27,7 @@ export const ContainerCarouselFilms = styled.div`
   h4 {
     position: relative;
     font-weight: 600;
-    top: 20px;
     font-size: 20px;
-    margin-left: 80px;
+    margin: 60px 60px 0 90px;
   }
 `;
