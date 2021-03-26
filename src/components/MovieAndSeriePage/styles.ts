@@ -48,8 +48,12 @@ export const FilmInformation = styled.div`
   flex-direction: column;
 
   .logoFilm_img {
-    margin-top: 130px;
+    margin: 110px 0 0 30px;
     width: 35%;
+
+    @media (min-width: 1580px) {
+      margin-top: 180px;
+    }
 
     @media (min-width: 2560px) {
       margin: 300px 0 0 100px;
@@ -70,6 +74,7 @@ export const FilmInformation = styled.div`
     display: flex;
     justify-content: start;
     width: 550px;
+    margin-left: 20px;
 
     @media (min-width: 2560px) {
       margin-left: 100px;
@@ -97,7 +102,7 @@ export const IconLottieAnimation = styled.div`
 
 export const InfoFilm = styled.div`
   max-width: 800px;
-  margin: 0 30px 0 30px;
+  margin: 0 30px 0 50px;
   font-family: 'AvenirRoman';
   font-size: 20px;
 
@@ -105,8 +110,19 @@ export const InfoFilm = styled.div`
     margin-left: 130px;
   }
 
+  .infoMovie {
+    @media (min-width: 3440px) {
+      font-size: 33px;
+      width: 1360px;
+    }
+  }
+
   .genreMovie {
     margin: 15px 0 15px 0;
-    font-size: 15px;
+    font-size: 20px;
+
+    @media (min-width: 3440px) {
+      font-size: 27px;
+    }
   }
 `;

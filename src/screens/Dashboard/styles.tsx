@@ -29,5 +29,9 @@ export const ContainerCarouselFilms = styled.div`
     font-weight: 600;
     font-size: 20px;
     margin: 60px 60px 0 90px;
+
+    @media (min-width: 2560px) {
+      font-size: 30px;
+    }
   }
 `;

@@ -59,6 +59,13 @@ export const Container = styled.button<ContainerProps>`
   border-radius: 3px;
   transition: background-color 0.2s;
 
+  @media (min-width: 3440px) {
+    width: 1100px;
+    padding: 0 50px;
+    height: 100px;
+    font-size: 25px;
+  }
+
   @media (max-width: 960px) {
     margin-left: 25px;
     font-size: 10px;
@@ -70,6 +77,11 @@ export const Container = styled.button<ContainerProps>`
     width: 20px;
     height: 20px;
     margin-right: 20px;
+
+    @media (min-width: 3440px) {
+      width: 35px;
+      height: 35px;
+    }
 
     @media (max-width: 960px) {
       width: 15px;

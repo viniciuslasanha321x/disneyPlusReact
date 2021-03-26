@@ -111,10 +111,10 @@ const Tab = ({
             }
           >
             {!disableEpisodies && (
-              <div className="teste">
+              <>
                 <h2>Temporada 1</h2>
                 <TypesCarousel carouselImagesFilm={slideMoviePartOne} />
-              </div>
+              </>
             )}
           </div>
           <div

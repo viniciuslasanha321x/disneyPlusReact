@@ -5,15 +5,15 @@ export const Container = styled.div`
   left: 15px;
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 97%;
   height: 70%;
   background: transparent;
-  margin-top: 40px;
+  margin: 40px 0 0 25px;
   word-break: break-all;
 
   @media (min-width: 2560px) {
-    width: 85%;
-    height: 70%;
+    width: 90%;
+    height: 40%;
     margin-left: 100px;
   }
 `;
@@ -68,6 +68,10 @@ export const TabButton = styled.button<TabButtonProps>`
     color: #fff;
   }
 
+  @media (min-width: 2560px) {
+   font-size:30px;
+  };
+
   @media (max-width: 600px) {
    font-size:15px;
   };
@@ -92,6 +96,11 @@ export const ContentTabs = styled.div`
       h2 {
         font-weight: 600;
         text-align: start;
+
+        @media (min-width: 2560px) {
+          font-size: 30px;
+          padding: 60px 60px 0 0;
+        }
       }
     }
   }
@@ -110,12 +119,30 @@ export const FilmInfo = styled.div`
 `;
 
 export const FilmSummary = styled.div`
-  h2 {
-    font-size: 40px;
+  @media (min-width: 2560px) {
+    width: 1586px;
+
+    h2 {
+      font-size: 60px;
+    }
   }
+
+  h2 {
+    margin-left: 15px;
+    font-size: 40px;
+
+    @media (min-width: 2560px) {
+      font-size: 60px;
+    }
+  }
+
   p {
     font-size: 20px;
     margin-left: 20px;
+
+    @media (min-width: 2560px) {
+      font-size: 30px;
+    }
   }
 
   @media (max-width: 768px) {

@@ -22,6 +22,11 @@ export const Container = styled.div`
       background-color: #fff;
     }
 
+    @media (min-width: 3440px) {
+      width: 75px;
+      height: 75px;
+    }
+
     @media (max-width: 960px) {
       margin-right: 15px;
       width: 35px;
@@ -32,9 +37,15 @@ export const Container = styled.div`
       width: 30px;
       height: 30px;
 
+      @media (min-width: 3440px) {
+        width: 55px;
+        height: 55px;
+      }
+
       &:hover {
         fill: #000;
       }
+
       @media (max-width: 960px) {
         width: 30px;
         height: 30px;
@@ -57,6 +68,11 @@ export const Container = styled.div`
       background-color: #fff;
     }
 
+    @media (min-width: 3440px) {
+      width: 75px;
+      height: 75px;
+    }
+
     @media (max-width: 960px) {
       width: 35px;
       height: 35px;
@@ -66,6 +82,11 @@ export const Container = styled.div`
       fill: #fff;
       width: 40px;
       height: 40px;
+
+      @media (min-width: 3440px) {
+        width: 60px;
+        height: 60px;
+      }
 
       &:hover {
         fill: #000;
@@ -94,6 +115,16 @@ export const ContentTooltip = styled.div<TooltipProps>`
   border: 1px solid rgb(151, 151, 151, 0.34);
   border-radius: 8px;
   padding: 10px 20px 10px 20px;
+
+  @media (min-width: 2560px) {
+    transform: translateY(95%);
+    left: 474px;
+  }
+
+  @media (min-width: 3440px) {
+    transform: translateY(113%);
+    left: 733px;
+  }
 
   @media (max-width: 960px) {
     transform: translateY(80%);
