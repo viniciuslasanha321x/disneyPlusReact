@@ -5,16 +5,10 @@ export const Container = styled.section`
     display: none;
   }
 
-  @media (min-width: 2560px) {
+  /* @media (min-width: 2560px) {
     svg {
       width: 100px;
       font-size: 100px;
     }
-    .teste {
-      display: none;
-    }
-    .teste2 {
-      display: flex;
-    }
-  }
+  } */
 `;

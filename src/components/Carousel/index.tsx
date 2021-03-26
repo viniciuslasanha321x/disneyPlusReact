@@ -16,18 +16,7 @@ const Carousel = ({ slides }: PropsWithChildren<CarouselProps>) => {
         <SanCarousel
           slides={slides}
           autoPlay={4000}
-          height="360px"
-          slideSize="88%"
-          focusSlide
-          slideBorderRadius="10px"
-          spaceBetweenSlides="10px"
-        />
-      </div>
-      <div className="teste2">
-        <SanCarousel
-          slides={slides}
-          autoPlay={4000}
-          height="860px"
+          height="390px"
           slideSize="88%"
           focusSlide
           slideBorderRadius="10px"

@@ -14,8 +14,8 @@ export const Container = styled.div`
   transition: all 250ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
 
   @media (min-width: 2560px) {
-    width: 400px;
-    height: 230px;
+    width: 300px;
+    height: 170px;
   }
 
   @media (min-width: 3440px) {

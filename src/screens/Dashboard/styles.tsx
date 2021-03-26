@@ -14,7 +14,7 @@ export const FilmCardContent = styled.div`
   gap: 17px;
 
   @media (min-width: 2560px) {
-    grid-template-columns: repeat(auto-fit, 450px);
+    grid-template-columns: repeat(auto-fit, 350px);
   }
 
   @media (min-width: 3440px) {

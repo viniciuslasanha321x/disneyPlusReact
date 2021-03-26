@@ -6,7 +6,7 @@ export const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 200px;
+  height: 220px;
   width: 100%;
 
   @media (min-width: 1700px) {
@@ -14,11 +14,11 @@ export const Container = styled.div`
   }
 
   @media (min-width: 2560px) {
-    height: 600px;
+    height: 400px;
   }
 
-  @media (min-width: 3100px) {
-    height: 700px;
+  @media (min-width: 3440px) {
+    height: 500px;
   }
 
   .rec-carousel-item:focus {
@@ -34,7 +34,7 @@ export const Container = styled.div`
   }
 
   .rec {
-    height: 200px;
+    height: 220px;
     background-color: transparent !important;
     box-shadow: none !important;
 
@@ -50,12 +50,12 @@ export const Container = styled.div`
       height: 600px;
     }
 
-    @media (min-width: 3100px) {
-      height: 700px;
+    @media (min-width: 3440px) {
+      height: 600px;
     }
   }
 
-  @media (min-width: 2560px) {
+  @media (min-width: 3440px) {
     .rec-arrow-right {
       margin-right: 100px;
     }
