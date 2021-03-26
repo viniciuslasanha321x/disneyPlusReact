@@ -12,7 +12,7 @@ export const Container = styled.div`
   word-break: break-all;
 
   @media (min-width: 2560px) {
-    width: 90%;
+    width: 93%;
     height: 40%;
     margin-left: 100px;
   }
@@ -94,10 +94,15 @@ export const ContentTabs = styled.div`
       display: block;
 
       h2 {
+        padding: 9px 20px 0 0;
         font-weight: 600;
         text-align: start;
 
-        @media (min-width: 2560px) {
+        @media (min-width: 1586px) {
+          padding: 30px 20px 0 0;
+        }
+
+        @media (min-width: 3440px) {
           font-size: 30px;
           padding: 60px 60px 0 0;
         }
@@ -110,6 +115,13 @@ export const FilmInfo = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 90px;
+  margin-top: 15px;
+
+  @media (min-width: 3440px) {
+    display: grid;
+    grid-template-columns: 1fr;
+    max-width: 500px;
+  }
 
   @media (max-width: 768px) {
     display: grid;
@@ -120,33 +132,37 @@ export const FilmInfo = styled.div`
 
 export const FilmSummary = styled.div`
   @media (min-width: 2560px) {
-    width: 1586px;
-
-    h2 {
-      font-size: 60px;
-    }
-  }
-
-  h2 {
-    margin-left: 15px;
-    font-size: 40px;
-
-    @media (min-width: 2560px) {
-      font-size: 60px;
-    }
-  }
-
-  p {
-    font-size: 20px;
-    margin-left: 20px;
-
-    @media (min-width: 2560px) {
-      font-size: 30px;
-    }
+    width: 1086px;
   }
 
   @media (max-width: 768px) {
     margin: 0 30px 0 0;
+  }
+
+  h3 {
+    margin-left: 10px;
+    font-size: 40px;
+
+    @media (min-width: 2560px) {
+      font-size: 65px;
+    }
+  }
+  /* h2 {
+    margin-left: 15px;
+    font-size: 40px;
+
+    @media (min-width: 2560px) {
+      font-size: 160px;
+    }
+  } */
+
+  p {
+    font-size: 20px;
+    margin-left: 10px;
+
+    @media (min-width: 2560px) {
+      font-size: 30px;
+    }
   }
 `;
 
@@ -154,6 +170,10 @@ export const AdditionalInformationMovie = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   max-width: 500px;
+
+  @media (min-width: 2560px) {
+    max-width: none;
+  }
 
   @media (max-width: 768px) {
     margin-left: 10px;
@@ -165,13 +185,29 @@ export const ContentOne = styled.div`
   flex-direction: column;
   margin-top: 45px;
 
+  @media (min-width: 3440px) {
+    margin: -20px 0 0 30px;
+  }
+
   p {
     height: 20px;
     color: rgb(202, 202, 202);
+
+    @media (min-width: 2560px) {
+      height: 35px;
+      font-size: 25px;
+      font-weight: 600;
+    }
   }
 
   span {
     color: rgb(249, 249, 249);
+
+    @media (min-width: 2560px) {
+      height: 35px;
+      font-size: 25px;
+      font-weight: 600;
+    }
   }
 
   .release {
@@ -186,9 +222,27 @@ export const ContentOne = styled.div`
 export const ContentTwo = styled.div`
   margin-top: 45px;
 
+  @media (min-width: 3440px) {
+    margin-top: -20px;
+  }
+
+  @media (min-width: 2560px) {
+    p {
+      height: 35px;
+      font-size: 25px;
+      font-weight: 600;
+    }
+  }
+
   span {
     display: flex;
     justify-content: column;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+
+    @media (min-width: 2560px) {
+      height: 35px;
+      font-size: 25px;
+      font-weight: 600;
+    }
   }
 `;

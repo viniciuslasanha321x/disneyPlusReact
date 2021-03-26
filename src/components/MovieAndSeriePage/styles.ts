@@ -31,7 +31,7 @@ export const ContainerWandavisionPageFilm = styled.div<BackgroundProps>`
     width: 100%;
     z-index: -999;
     filter: ${props =>
-      props.isScrolled ? 'brightness(78%)' : 'brightness(100%)'};
+      props.isScrolled ? 'brightness(65%)' : 'brightness(100%)'};
     transition: filter 400ms;
     opacity: 350px;
   }
@@ -61,6 +61,11 @@ export const FilmInformation = styled.div`
     }
 
     @media (min-width: 3440px) {
+      margin: 360px 0 0 100px;
+      width: 20%;
+    }
+
+    @media (min-width: 3856px) {
       margin: 600px 0 0 100px;
       width: 20%;
     }

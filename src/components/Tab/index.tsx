@@ -140,7 +140,7 @@ const Tab = ({
           >
             <FilmInfo>
               <FilmSummary>
-                <h2>{titleFilm}</h2>
+                <h3>{titleFilm}</h3>
                 {children}
                 <p>{filmSummary}</p>
                 {children}

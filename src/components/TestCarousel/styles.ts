@@ -57,10 +57,12 @@ export const Container = styled.div`
 
   @media (min-width: 3440px) {
     .rec-arrow-right {
+      color: #fff;
       margin-right: 100px;
     }
 
     .rec-arrow-left {
+      color: #fff;
       margin-left: 100px;
     }
   }
