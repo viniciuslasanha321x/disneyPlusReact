@@ -108,7 +108,7 @@ export const ContentTooltip = styled.div<TooltipProps>`
   display: ${({ isVisible }) => (isVisible ? 'block' : 'none')};
   width: 250px;
   position: absolute;
-  left: 371px;
+  left: 360px;
   transform: translateX(50%);
   transform: translateY(90%);
   background: #0072d2;

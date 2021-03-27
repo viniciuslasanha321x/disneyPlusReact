@@ -6,8 +6,20 @@ export const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 300px;
+  height: 220px;
   width: 100%;
+
+  @media (min-width: 1700px) {
+    height: 350px;
+  }
+
+  @media (min-width: 2560px) {
+    height: 400px;
+  }
+
+  @media (min-width: 3440px) {
+    height: 500px;
+  }
 
   .rec-carousel-item:focus {
     outline: none;
@@ -17,10 +29,40 @@ export const Container = styled.div`
     display: none;
   }
 
-  .rec {
+  .rec-slider-container {
     height: 200px;
+  }
+
+  .rec {
+    height: 220px;
     background-color: transparent !important;
     box-shadow: none !important;
+
+    @media (min-width: 1700px) {
+      color: #fff;
+      font-size: 30px;
+      height: 350px;
+    }
+
+    @media (min-width: 2560px) {
+      color: #fff;
+      font-size: 60px;
+      height: 600px;
+    }
+
+    @media (min-width: 3440px) {
+      height: 600px;
+    }
+
+    @media (min-width: 3440px) {
+      .rec-arrow-right {
+        margin-right: 100px;
+      }
+
+      .rec-arrow-left {
+        margin-left: 100px;
+      }
+    }
   }
 `;
 

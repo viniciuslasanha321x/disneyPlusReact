@@ -9,6 +9,15 @@ export const Container = styled.div`
   grid-template-columns: repeat(auto-fit, 250px);
   gap: 17px;
 
+  @media (min-width: 2560px) {
+    grid-template-columns: repeat(auto-fit, 350px);
+  }
+
+  @media (min-width: 3440px) {
+    grid-template-columns: repeat(auto-fit, 550px);
+    gap: 20px;
+  }
+
   .card {
     place-content: center;
     border-radius: 13px;
@@ -19,5 +28,15 @@ export const Container = styled.div`
     width: 250px;
     height: 140px;
     transition: all 250ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
+
+    @media (min-width: 2560px) {
+      width: 300px;
+      height: 170px;
+    }
+
+    @media (min-width: 3440px) {
+      width: 500px;
+      height: 280px;
+    }
   }
 `;
