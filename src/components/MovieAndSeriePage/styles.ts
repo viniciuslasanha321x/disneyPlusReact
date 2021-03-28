@@ -65,7 +65,7 @@ export const FilmInformation = styled.div`
       width: 20%;
     }
 
-    @media (min-width: 3856px) {
+    @media (min-width: 3840px) {
       margin: 600px 0 0 100px;
       width: 20%;
     }

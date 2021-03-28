@@ -11,12 +11,13 @@ import WatchList from '../screens/WatchList';
 import Original from '../screens/Original';
 import Films from '../screens/Films';
 import Series from '../screens/Series';
-import WandavisionPageFilm from '../screens/WandavisionPageFilm';
 import BrandDisneyFilmPage from '../screens/BrandDisneyFilmPage';
 import BrandPixarFilmPage from '../screens/BrandPixarFilmPage';
 import BrandMarvelFilmPage from '../screens/BrandMarvelFilmPage';
 import BrandStarWarsFilmPage from '../screens/BrandStarWarsFilmPage';
 import BrandNationalGeographicFilmPage from '../screens/BrandNationalGeographicFilmPage';
+import WandavisionPageFilm from '../screens/WandavisionPageFilm';
+import GroupWatch from '../screens/GroupWatch';
 
 const Routes: React.FC = () => (
   <BrowserRouter>
@@ -31,11 +32,12 @@ const Routes: React.FC = () => (
       <Route path="/original" component={Original} />
       <Route path="/films" component={Films} />
       <Route path="/series" component={Series} />
-      <Route path="/wandavision-page-film" component={WandavisionPageFilm} />
       <Route path="/disney-films" component={BrandDisneyFilmPage} />
       <Route path="/pixar-films" component={BrandPixarFilmPage} />
       <Route path="/marvel-films" component={BrandMarvelFilmPage} />
       <Route path="/starwars-films" component={BrandStarWarsFilmPage} />
+      <Route path="/wandavision-page-film" component={WandavisionPageFilm} />
+      <Route path="/group-watch" component={GroupWatch} />
       <Route
         path="/national-geographic-films"
         component={BrandNationalGeographicFilmPage}

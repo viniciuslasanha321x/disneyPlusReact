@@ -7,6 +7,7 @@ import {
   ContainerFilmsByBrands,
   ContentFilmsByBrand,
   ContainerBackground,
+  TesteDiv,
 } from './styles';
 
 interface FilmProps {
@@ -42,8 +43,8 @@ const FilmsByBrand = ({
   window.addEventListener('scroll', handleChangeBackground);
 
   return (
-    <>
-      {isLoading ? (
+    // <>
+    /* {isLoading ? (
         <ContainerFilmsByBrands>
           <div className="teste">
             <img
@@ -53,33 +54,29 @@ const FilmsByBrand = ({
             />
           </div>
         </ContainerFilmsByBrands>
-      ) : (
-        <ContainerFilmsByBrands>
-          <ContentFilmsByBrand isScrolled={isScrolled}>
-            <img className="brandLogo_img" src={logoImg} alt={altImg} />
-            {isVisibleBackground ? (
-              <ContainerBackground>
-                <video
-                  onEnded={() => setIsVisibleBackground(false)}
-                  autoPlay
-                  muted
-                >
-                  <source src={videoUrl} type="video/mp4" />
-                </video>
-              </ContainerBackground>
-            ) : (
-              <>
-                <img
-                  className="background_img"
-                  src={backgroundImg}
-                  alt={altBackgroundImg}
-                />
-              </>
-            )}
-          </ContentFilmsByBrand>
-        </ContainerFilmsByBrands>
-      )}
-    </>
+      ) : ( */
+    <ContainerFilmsByBrands>
+      <ContentFilmsByBrand isScrolled={isScrolled}>
+        <img className="brandLogo_img" src={logoImg} alt={altImg} />
+        {isVisibleBackground ? (
+          <ContainerBackground>
+            <video onEnded={() => setIsVisibleBackground(false)} autoPlay muted>
+              <source src={videoUrl} type="video/mp4" />
+            </video>
+          </ContainerBackground>
+        ) : (
+          <>
+            <img
+              className="background_img"
+              src={backgroundImg}
+              alt={altBackgroundImg}
+            />
+          </>
+        )}
+      </ContentFilmsByBrand>
+    </ContainerFilmsByBrands>
+    //   {/* )}
+    // </> */}
   );
 };
 

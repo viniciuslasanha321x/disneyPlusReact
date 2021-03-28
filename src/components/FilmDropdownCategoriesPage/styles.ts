@@ -55,7 +55,7 @@ export const Navigation = styled.nav`
 
 export const Title = styled.h1`
   color: rgb(249, 249, 249);
-  font-size: 45px;
+  font-size: 50px;
   font-weight: 600;
 `;
 

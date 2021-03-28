@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 import IconAddComponent from '../../assets/icons/IconAddComponent';
 import IconGroupWatchComponent from '../../assets/icons/IconGroupWatchComponent';
@@ -18,14 +19,16 @@ const ButtonIconMovie: React.FC = ({ children }) => {
       >
         {isVisibleIconChecked ? <IconAddComponent /> : <>{children}</>}
       </button>
-      <button
-        className="iconGroupWatch"
-        type="button"
-        onMouseEnter={() => setIsOpenTooltip(true)}
-        onMouseLeave={() => setIsOpenTooltip(false)}
-      >
-        <IconGroupWatchComponent />
-      </button>
+      <Link to="/group-watch">
+        <button
+          className="iconGroupWatch"
+          type="button"
+          onMouseEnter={() => setIsOpenTooltip(true)}
+          onMouseLeave={() => setIsOpenTooltip(false)}
+        >
+          <IconGroupWatchComponent />
+        </button>
+      </Link>
       <ContentTooltip
         isVisible={isOpenTooltip}
         onMouseEnter={() => setIsOpenTooltip(true)}

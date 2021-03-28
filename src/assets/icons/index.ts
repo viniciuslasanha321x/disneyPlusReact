@@ -14,6 +14,7 @@ import PlayIcon from './Play.svg';
 import PlayIconComponent from './PlayIconComponent';
 import IconAddComponent from './IconAddComponent';
 import IconGroupWatchComponent from './IconGroupWatchComponent';
+import IconAddGroupWatchComponent from './IconAddGroupWatchComponent';
 
 export {
   IconAdd,
@@ -32,4 +33,5 @@ export {
   PlayIconComponent,
   IconAddComponent,
   IconGroupWatchComponent,
+  IconAddGroupWatchComponent,
 };

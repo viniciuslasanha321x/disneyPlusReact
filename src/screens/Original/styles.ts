@@ -31,9 +31,12 @@ export const FilmImages = styled.div`
   justify-content: center;
   align-items: center;
   grid-template-columns: repeat(auto-fit, 250px);
-  grid-template-rows: 280px auto 280px;
+  grid-template-rows: 180px auto 180px;
+  max-width:1300px;
+  margin:0 auto;
   column-gap: 10px;
   row-gap: 15px;
+
 
   img {
     border: radius 4px;

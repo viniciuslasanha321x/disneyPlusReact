@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import Button from '../../components/Button';
 
 import DisneyLogo from '../../assets/images/DisneyLogo.png';
+import RatatouilleProfileImage from '../../assets/images/Profile.png';
 
 import {
   Container,
@@ -13,8 +14,6 @@ import {
   Profile,
   ContainerAvatar,
 } from './styles';
-
-import RatatouilleProfileImage from '../../assets/images/Profile.png';
 
 const SelectProfile: React.FC = () => {
   return (

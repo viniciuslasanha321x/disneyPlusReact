@@ -45,13 +45,13 @@ const TesteCarousel: React.FC<CarouselImages> = ({
     { width: 768, itemsToShow: 3, itemsToScroll: 3 },
     { width: 964, itemsToShow: 4, itemsToScroll: 4 },
     { width: 1366, itemsToShow: 5, itemsToScroll: 5 },
-    { width: 1586, itemsToShow: 4, itemsToScroll: 4 },
-    { width: 1700, itemsToShow: 4, itemsToScroll: 4 },
-    { width: 1820, itemsToShow: 5, itemsToScroll: 5 },
-    { width: 1950, itemsToShow: 5, itemsToScroll: 5 },
+    { width: 1580, itemsToShow: 4, itemsToScroll: 4 },
+    { width: 1720, itemsToShow: 4, itemsToScroll: 4 },
+    { width: 1800, itemsToShow: 5, itemsToScroll: 5 },
+    { width: 1920, itemsToShow: 5, itemsToScroll: 5 },
     { width: 2560, itemsToShow: 5, itemsToScroll: 5 },
     { width: 3440, itemsToShow: 6, itemsToScroll: 6 },
-    { width: 3856, itemsToShow: 8, itemsToScroll: 8 },
+    { width: 3840, itemsToShow: 8, itemsToScroll: 8 },
   ];
 
   return (

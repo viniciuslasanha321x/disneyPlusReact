@@ -16,12 +16,17 @@ const animationLoading = keyframes`
   }
 `;
 
+export const TesteDiv = styled.div`
+  /* background-size: cover; */
+`;
+
 export const ContainerFilmsByBrands = styled.div<ContainerProps>`
   position: relative;
   top: 0;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #000;
 
   .teste {
     position: absolute;
@@ -32,8 +37,8 @@ export const ContainerFilmsByBrands = styled.div<ContainerProps>`
     animation: ${animationLoading} 1s linear infinite;
 
     .Container__loading {
-      width: 30px;
-      height: 30px;
+      width: 150px;
+      height: 150px;
     }
   }
 `;
