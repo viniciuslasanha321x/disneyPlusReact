@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Lottie from 'react-lottie';
 
 import Header from '../Header';
@@ -15,8 +15,7 @@ import {
   InfoFilm,
 } from './styles';
 
-type PropsMovieAndSerie = {
-  children: React.ReactNode;
+export interface ISeriesMovies {
   backgroundImage: string;
   filmLogo: string;
   genreMoviesAndClassifications: string;
@@ -26,11 +25,12 @@ type PropsMovieAndSerie = {
   releaseDateInformation: string;
   genreInformation: string;
   classificationInformation: string;
-  firstPersonCast: string;
-  secondPersonCast: string;
-  thirdPersonCast: string;
-  fourthPersonCast: string;
-  fifthPersonCast: string;
+  producers: string[];
+}
+
+type PropsMovieAndSerie = {
+  // children: React.ReactNode;
+  seriesMovies: ISeriesMovies;
   imageMoviePartOne: Array<{
     img: string;
     link: string;
@@ -48,21 +48,8 @@ type PropsMovieAndSerie = {
 };
 
 const MovieAndSeriePage = ({
-  children,
-  backgroundImage,
-  filmLogo,
-  genreMoviesAndClassifications,
-  infoMovie,
-  titlefilm,
-  filmSummary,
-  releaseDateInformation,
-  genreInformation,
-  classificationInformation,
-  firstPersonCast,
-  secondPersonCast,
-  thirdPersonCast,
-  fourthPersonCast,
-  fifthPersonCast,
+  // children,
+  seriesMovies,
   imageMoviePartOne,
   imageMoviePartTwo,
   imageMoviePartThree,
@@ -78,6 +65,10 @@ const MovieAndSeriePage = ({
     return setIsScrolled(false);
   };
 
+  // useEffect(() => {
+  //   setMvseries(readfile());
+  // }, []);
+
   window.addEventListener('scroll', handleChangeBackground);
 
   return (
@@ -86,9 +77,17 @@ const MovieAndSeriePage = ({
       <ContainerWandavisionPageFilm isScrolled={isScrolled}>
         <div className="featuredVertical">
           <div className="featuredHorizontal">
-            <img className="background_img" src={backgroundImage} alt="teste" />
+            <img
+              className="background_img"
+              src={seriesMovies.backgroundImage}
+              alt="teste"
+            />
             <FilmInformation>
-              <img className="logoFilm_img" src={filmLogo} alt="logo" />
+              <img
+                className="logoFilm_img"
+                src={seriesMovies.filmLogo}
+                alt="logo"
+              />
               <div className="containerButton">
                 <ButtonPlay variant="withBackground">
                   <PlayIconComponent />
@@ -117,12 +116,12 @@ const MovieAndSeriePage = ({
               </div>
               <InfoFilm>
                 <p className="genreMovie">
-                  {genreMoviesAndClassifications}
-                  {children}
+                  {seriesMovies.genreMoviesAndClassifications}
+                  {/* {children} */}
                 </p>
                 <p className="infoMovie">
-                  {infoMovie}
-                  {children}
+                  {seriesMovies.infoMovie}
+                  {/* {children} */}
                 </p>
               </InfoFilm>
             </FilmInformation>
@@ -131,16 +130,14 @@ const MovieAndSeriePage = ({
                 slideMoviePartOne={imageMoviePartOne}
                 slideMoviePartTwo={imageMoviePartTwo}
                 slideMoviePartThree={imageMoviePartThree}
-                titleFilm={titlefilm}
-                filmSummary={filmSummary}
-                releaseDateInformation={releaseDateInformation}
-                genreInformation={genreInformation}
-                classificationInformation={classificationInformation}
-                firstPersonCast={firstPersonCast}
-                secondPersonCast={secondPersonCast}
-                thirdPersonCast={thirdPersonCast}
-                fourthPersonCast={fourthPersonCast}
-                fifthPersonCast={fifthPersonCast}
+                titleFilm={seriesMovies.titlefilm}
+                filmSummary={seriesMovies.filmSummary}
+                releaseDateInformation={seriesMovies.releaseDateInformation}
+                genreInformation={seriesMovies.genreInformation}
+                classificationInformation={
+                  seriesMovies.classificationInformation
+                }
+                producers={seriesMovies.producers}
                 disableEpisodies={disableEpisodiesTab}
               />
             </div>

@@ -17,17 +17,13 @@ import {
 export type Slide = { link: string; img: string };
 
 interface PropsTabMovie {
-  children: React.ReactNode;
+  // children: React.ReactNode;
   titleFilm: string;
   filmSummary: string;
   releaseDateInformation: string;
   genreInformation: string;
   classificationInformation: string;
-  firstPersonCast: string;
-  secondPersonCast: string;
-  thirdPersonCast: string;
-  fourthPersonCast: string;
-  fifthPersonCast: string;
+  producers: string[];
   slideMoviePartOne: Array<{
     img: string;
     link: string;
@@ -44,17 +40,13 @@ interface PropsTabMovie {
 }
 
 const Tab = ({
-  children,
+  // children,
   titleFilm,
   filmSummary,
   releaseDateInformation,
   genreInformation,
   classificationInformation,
-  firstPersonCast,
-  secondPersonCast,
-  thirdPersonCast,
-  fourthPersonCast,
-  fifthPersonCast,
+  producers,
   slideMoviePartOne,
   slideMoviePartTwo,
   slideMoviePartThree,
@@ -141,41 +133,30 @@ const Tab = ({
             <FilmInfo>
               <FilmSummary>
                 <h3>{titleFilm}</h3>
-                {children}
                 <p>{filmSummary}</p>
-                {children}
               </FilmSummary>
               <AdditionalInformationMovie>
                 <ContentOne>
                   <div className="release">
                     <p>Data de lançamento:</p>
                     <span>{releaseDateInformation}</span>
-                    {children}
                   </div>
                   <div className="genre">
                     <p>Género:</p>
                     <span>{genreInformation}</span>
-                    {children}
                   </div>
                   <div className="classification">
                     <p>Classificação:</p>
                     <span>{classificationInformation}</span>
-                    {children}
                   </div>
                 </ContentOne>
                 <ContentTwo>
                   <div className="cast">
                     <p>Elenco:</p>
-                    <span>{firstPersonCast}</span>
-                    {children}
-                    <span>{secondPersonCast}</span>
-                    {children}
-                    <span>{thirdPersonCast}</span>
-                    {children}
-                    <span>{fourthPersonCast}</span>
-                    {children}
-                    <span>{fifthPersonCast}</span>
-                    {children}
+                    {producers &&
+                      producers.map((producer, index) => (
+                        <span key={index}>{producer}</span>
+                      ))}
                   </div>
                 </ContentTwo>
               </AdditionalInformationMovie>
